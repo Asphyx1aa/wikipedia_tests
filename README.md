@@ -23,6 +23,7 @@ ___
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="media/intellij-original.svg" width="50" height="50" /></a>
 <a href="https://www.java.com/"><img src="media/java-original.svg" width="50" height="50" /></a>
+<a href="https://selenide.org/"><img src="media/Selenide.svg" width="50" height="50" /></a>
 <a href="https://junit.org/junit5/"><img src="media/junit-original-wordmark.svg" width="50" height="50" /></a>
 <a href="https://github.com/"><img src="media/github-original.svg" width="50" height="50" /></a>
 <a href="https://gradle.org/"><img src="media/gradle-original.svg" width="50" height="50" /></a>
@@ -30,6 +31,9 @@ ___
 <a href="https://allurereport.org/"><img src="media/Allure.svg" width="50" height="50" /></a>
 <a href="https://qameta.io/"><img src="media/qameta.svg" width="50" height="50" /></a>
 <a href="https://www.atlassian.com/software/jira"><img src="media/Jira.svg" width="50" height="50" /></a>
+<a href="https://appium.io/"><img src="media/appium.png" width="50" height="50" /></a>
+<a href="https://www.browserstack.com"><img src="media/browserstack.jpeg" width="50" height="50" /></a>
+<a href="https://developer.android.com/studio"><img src="media/AndroidStudio.png" width="50" height="50" /></a>
 </p>
 
 <a id="cases"></a>
