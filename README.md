@@ -9,7 +9,6 @@ ___
 - <a href="#tools">Технологии и инструменты</a>
 - <a href="#cases">Примеры автоматизированных тест-кейсов</a>
 - <a href="#jenkins">Сборка в Jenkins</a>
-- - <a href="#jenkins-params">Параметры сборки в Jenkins</a>
 - - <a href="#commands">Команды для запуска из терминала</a>
 - <a href="#allure">Allure Report</a>
 - - <a href="#allure-report">Основная страница отчета</a>
@@ -40,28 +39,22 @@ ___
 - Проверка наличие контента в онбординге при первом запуске
 
 <a id="jenkins"></a>
-## <img src="media/jenkins-original.svg" width="20" height="20" /> Сборка в [Jenkinks](https://jenkins.autotests.cloud/job/033_undef1ned_0_hw14/)
+## <img src="media/jenkins-original.svg" width="20" height="20" /> Сборка в [Jenkinks](https://jenkins.autotests.cloud/job/033_undef1ned_0_diploma23_mob/)
 <img src="media/jenkins.jpg"/>
 
-<a id="jenkins-params"></a>
-### Параметры сборки в Jenkins
-- *URL* (Ссылка на API)
-- *API_KEY* (Ключ доступа к API)
 
 <a id="commands"></a>
 ### Команды для запуска из терминала
 
 Локальный запуск:
 ```bash
-gradle clean -Denv=local test
+gradle clean local_test -Denv=emulator
+gradle clean local_test -Denv=local
 ```
 
 Удалённый запуск через Jenkins:
 ```bash
-gradle clean test
-"-Denv=remote"
-"-Durl=${URL}"
-"-Dapi_key=${API_KEY}"
+gradle clean remote_test -Denv=browserstack
 ```
 
 <a id="allure"></a>
