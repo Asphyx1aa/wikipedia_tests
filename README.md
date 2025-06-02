@@ -62,8 +62,9 @@ gradle clean remote_test -Denv=browserstack
 ```
 
 <a id="allure"></a>
-## <img src="media/Allure.svg" width="20" height="20" /> Allure Report
+## <img src="media/Allure.svg" width="20" height="20" /> [Allure Report](https://jenkins.autotests.cloud/job/033_undef1ned_0_diploma23_mob/allure/)
 ___
+> Allure Report - Фреймворк для формирования удобных и наглядных отчетов о результатах автотестов. Помогает быстро увидеть, какие тесты упали и почему.
 
 <a id="allure-report"></a>
 ### Основная страница отчета
@@ -74,12 +75,16 @@ ___
 <img src="media/allure-report.jpg"/>
 
 <a id="testops"></a>
-## <img src="media/qameta.svg" width="20" height="20" /> Интеграция с Allure TestOps
+## <img src="media/qameta.svg" width="20" height="20" /> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4767)
+___
+> Allure TestOps - платформа для управления автотестами: запуск, аналитика, отслеживание стабильности, ручные тест-кейсы и интеграция с Jira.
+
 <img src="media/allure-testops.jpg"/>
 
 <a id="jira"></a>
-## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с JIRA
-<img src="media/jira.jpg"/>
+## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-1456)
+___
+> Jira – система трекинга задач и багов. Используется для управления проектом, привязки тест-кейсов и отображения статуса выполнения тестов через интеграцию с TestOps.
 
 <a id="telegram"></a>
 ## <img src="media/Telegram.svg" width="20" height="20" /> Уведомления в телеграм при помощи бота:
