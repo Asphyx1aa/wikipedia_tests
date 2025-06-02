@@ -3,17 +3,16 @@ package tests;
 import io.qameta.allure.Severity;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import pages.WikipediaOnbordingPage;
-import pages.WikipediaSearchPage;
+import screens.WikipediaOnbordingScreen;
+import screens.WikipediaSearchScreen;
 
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 
-public class WikipediaTests extends TestBase  {
-    final WikipediaSearchPage wikipediaSearchPage = new WikipediaSearchPage();
-    final WikipediaOnbordingPage wikipediaOnbordingPage = new WikipediaOnbordingPage();
+public class WikipediaTests extends TestBase {
+    final WikipediaSearchScreen wikipediaSearchScreen = new WikipediaSearchScreen();
+    final WikipediaOnbordingScreen wikipediaOnbordingScreen = new WikipediaOnbordingScreen();
 
     @Test
     @Tag("browserstack")
@@ -22,7 +21,7 @@ public class WikipediaTests extends TestBase  {
     void searchOnMainScreenTest() {
         String searchQuery = "Appium";
 
-        wikipediaSearchPage.clickOnSearch()
+        wikipediaSearchScreen.clickOnSearch()
                 .sendSearchQuery(searchQuery)
                 .checkResults();
     }
@@ -34,7 +33,7 @@ public class WikipediaTests extends TestBase  {
     void openArticleFromTheResultList() {
         String searchQuery = "Android";
 
-        wikipediaSearchPage.clickOnSearch()
+        wikipediaSearchScreen.clickOnSearch()
                 .sendSearchQuery(searchQuery)
                 .openArticle()
                 .verifyNameOfArticle();
@@ -46,7 +45,7 @@ public class WikipediaTests extends TestBase  {
     @Severity(NORMAL)
     @DisplayName("Проверяем наличие контента в онбординге при первом запуске")
     void verifyThatAllContentExists() {
-        wikipediaOnbordingPage.assertThatMainTitleExist()
+        wikipediaOnbordingScreen.assertThatMainTitleExist()
                 .goOnNextScreen()
                 .assertThatImageExists()
                 .goOnNextScreen()

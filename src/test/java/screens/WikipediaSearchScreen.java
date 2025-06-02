@@ -1,4 +1,4 @@
-package pages;
+package screens;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
@@ -12,7 +12,7 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.appium.java_client.AppiumBy.id;
 
 
-public class WikipediaSearchPage {
+public class WikipediaSearchScreen {
     final SelenideElement searchField = $(accessibilityId("Search Wikipedia")),
             searchFieldInput = $(id("org.wikipedia.alpha:id/search_src_text")),
             articleInTheList = $(id("org.wikipedia.alpha:id/page_list_item_title")),
@@ -20,31 +20,31 @@ public class WikipediaSearchPage {
     final ElementsCollection searchResults = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
 
     @Step("Кликаем по строке поиска")
-    public WikipediaSearchPage clickOnSearch() {
+    public WikipediaSearchScreen clickOnSearch() {
         searchField.click();
         return this;
     }
 
     @Step("Вводим в поисковую строку: {query} ")
-    public WikipediaSearchPage sendSearchQuery(String query) {
+    public WikipediaSearchScreen sendSearchQuery(String query) {
         searchFieldInput.sendKeys(query);
         return this;
     }
 
     @Step("Проверяем, что есть результаты по запросу")
-    public WikipediaSearchPage checkResults() {
+    public WikipediaSearchScreen checkResults() {
         searchResults.shouldHave(sizeGreaterThan(0));
         return this;
     }
 
     @Step("Открываем статью из списка результатов")
-    public WikipediaSearchPage openArticle() {
+    public WikipediaSearchScreen openArticle() {
         articleInTheList.click();
         return this;
     }
 
     @Step("Проверяем, что открылась нужная статья")
-    public WikipediaSearchPage verifyNameOfArticle() {
+    public WikipediaSearchScreen verifyNameOfArticle() {
         articleTitle.shouldHave(Condition.text("Android"));
         return this;
     }

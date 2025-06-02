@@ -18,7 +18,7 @@ import static helpers.EnvHelper.isBrowserStack;
 public class TestBase {
     @BeforeAll
     static void testSetup() {
-        if(isBrowserStack) {
+        if (isBrowserStack) {
             Configuration.browser = BrowserstackDriver.class.getName();
         } else {
             Configuration.browser = LocalDriver.class.getName();
@@ -38,7 +38,7 @@ public class TestBase {
         Attach.pageSource();
         Attach.screenshotAs("Last Screenshot");
 
-        if(isBrowserStack) {
+        if (isBrowserStack) {
             String sessionId = Selenide.sessionId().toString();
             closeWebDriver();
             Attach.addVideo(sessionId);
